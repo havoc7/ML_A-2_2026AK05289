@@ -3,7 +3,7 @@ Train 5 classifiers on the UCI Dry Bean dataset, evaluate them, and save:
   model/*.joblib            -> trained models (full pipelines incl. scaler)
   model/label_info.json     -> feature names + class names
   test_data.csv             -> 20% hold-out set (features + Class) for the Streamlit app
-  dry_bean_classification_results.csv -> comparison table (paste into README)
+  dry_bean_classification_results.csv -> comparison table (present in README)
 Run:  python train_models.py
 """
 import json
