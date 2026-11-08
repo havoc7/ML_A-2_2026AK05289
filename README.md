@@ -14,7 +14,7 @@ Classify dry bean grains into one of 7 varieties (Barbunya, Bombay, Cali, Dermas
 ## c. GitHub Repository Link
 https://github.com/havoc7/ML_A-2_2026AK05289
 
-Live app: <PASTE STREAMLIT COMMUNITY CLOUD URL HERE>
+Live app: https://mla-22026ak05289-wvj8xxwm2y8sgltww7mvpu.streamlit.app/
 
 ## d. Models Used
 
@@ -29,15 +29,16 @@ Live app: <PASTE STREAMLIT COMMUNITY CLOUD URL HERE>
 | Naive Bayes            |     0.7639 | 0.9672 |      0.7744 |   0.7694 | 0.7677 | 0.7154 |
 
 ### Observations
+
 | ML Model Name | Observation about model performance |
 |---|---|
-| Logistic Regression | <fill using your numbers: e.g. strong linear baseline, struggles on overlapping classes such as Sira/Dermason/Barbunya> |
-| Decision Tree | <fill: captures non-linear splits, fast, but may overfit; lower AUC because of hard leaf probabilities> |
-| KNN | <fill: good after scaling, sensitive to k and to feature scale; slower prediction> |
-| Naive Bayes | <fill: lowest, since features are highly correlated, violating independence assumption> |
-| Support Vector Machine | <fill: RBF kernel models non-linear boundaries; usually best/near-best> |
+| Logistic Regression | Reaches about 0.92 accuracy and a macro F1 of 0.93, so a linear model separates most bean classes well on scaled features. It classifies BOMBAY perfectly (F1 1.00) and does well on HOROZ (0.96) and SEKER (0.94). Its weakest class is SIRA (F1 0.86), and BARBUNYA has the lowest recall (0.89). It is nearly level with SVM and KNN while being simpler and faster. |
+| Decision Tree | Reaches about 0.89 accuracy and a macro F1 of 0.91, the second-lowest overall, ahead only of Naive Bayes. It is perfect on BOMBAY but weaker on SIRA (F1 0.81, recall 0.79) and DERMASON (F1 0.88). A single unpruned tree likely overfits the training data and confuses the similar-looking SIRA, DERMASON and BARBUNYA classes. Its advantages are speed and interpretability. |
+| KNN | Reaches about 0.92 accuracy and a macro F1 of 0.93, essentially tied with Logistic Regression and SVM. Feature scaling helps the distance-based voting, and it is strong on HOROZ (0.95) and SEKER (0.95). SIRA is again its weakest class (F1 0.86), and BARBUNYA recall is 0.88. Its drawback is slower prediction, since each new point is compared against the whole training set. |
+| Naive Bayes | The weakest model, with about 0.76 accuracy and a macro F1 of 0.77. BARBUNYA is hit hardest (recall 0.46, F1 0.55), and CALI and SEKER precision is only 0.68. The likely cause is that Dry Bean features such as area, perimeter and axis lengths are highly correlated, which breaks Naive Bayes' independence assumption. It still classifies BOMBAY perfectly (F1 1.00), as it is a very distinct class. |
+| Support Vector Machine | The best model, with an accuracy of 0.9221 and a macro F1 of 0.93. It matches or leads the others on most classes: HOROZ 0.96, SEKER 0.94, CALI 0.94, and SIRA 0.87 (the best SIRA score of any model). The RBF kernel handles non-linear class boundaries and the overlap between SIRA, DERMASON and BARBUNYA. The margin over Logistic Regression and KNN is small but consistent. |
 
-**Overall winner:** Support Vector Machine (0.9221)
+**Overall winner: Support Vector Machine.** It has the highest accuracy (0.9221) and macro F1 (0.93), with the strongest per-class results, especially on SIRA, the hardest class. Logistic Regression and KNN are very close behind, while Naive Bayes is clearly the weakest.
 
 ## Repository Structure
 ```
