@@ -11,10 +11,10 @@ Classify dry bean grains into one of 7 varieties (Barbunya, Bombay, Cali, Dermas
 - Split: 80% train / 20% test, stratified, `random_state=42`. The test split is saved as `test_data.csv`.
 - Preprocessing: StandardScaler (inside pipelines for LR, KNN, SVM; not needed for Decision Tree / Gaussian NB).
 
-## c. GitHub Repository Link
-https://github.com/havoc7/ML_A-2_2026AK05289
+## c. Link
+GitHub Repository: https://github.com/havoc7/ML_A-2_2026AK05289
 
-Live app: https://mla-22026ak05289-wvj8xxwm2y8sgltww7mvpu.streamlit.app/
+Streamlit Live app: https://mla-22026ak05289-wvj8xxwm2y8sgltww7mvpu.streamlit.app/
 
 ## d. Models Used
 
