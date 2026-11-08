@@ -12,7 +12,7 @@ Classify dry bean grains into one of 7 varieties (Barbunya, Bombay, Cali, Dermas
 - Preprocessing: StandardScaler (inside pipelines for LR, KNN, SVM; not needed for Decision Tree / Gaussian NB).
 
 ## c. GitHub Repository Link
-<PASTE YOUR GITHUB REPO URL HERE>
+https://github.com/havoc7/ML_A-2_2026AK05289
 
 Live app: <PASTE STREAMLIT COMMUNITY CLOUD URL HERE>
 
