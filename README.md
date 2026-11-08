@@ -1,5 +1,6 @@
 # Dry Bean Classification - 5 ML Models + Streamlit App
-
+Submission by: Sarthak Rout 
+BITS ID: 2026AK05289
 ## a. Problem Statement
 Classify dry bean grains into one of 7 varieties (Barbunya, Bombay, Cali, Dermason, Horoz, Seker, Sira) from 16 geometric features extracted from images. The task is a multi-class classification problem; five ML models are trained on the same data and compared on six evaluation metrics.
 
@@ -18,15 +19,14 @@ Live app: <PASTE STREAMLIT COMMUNITY CLOUD URL HERE>
 ## d. Models Used
 
 ### Comparison Table
-(Paste the output of `python train_models.py` / `dry_bean_classification_results.csv` here. Metrics are macro-averaged; AUC is one-vs-rest.)
 
-| ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
-|---|---|---|---|---|---|---|
-| Logistic Regression | | | | | | |
-| Decision Tree | | | | | | |
-| KNN | | | | | | |
-| Naive Bayes | | | | | | |
-| Support Vector Machine | | | | | | |
+| ML Model Name          |   Accuracy |    AUC |   Precision |   Recall |     F1 |    MCC |
+|:-----------------------|-----------:|-------:|------------:|---------:|-------:|-------:|
+| Support Vector Machine |     0.9221 | 0.9949 |      0.9359 |   0.933  | 0.9343 | 0.9059 |
+| Logistic Regression    |     0.9214 | 0.9948 |      0.9354 |   0.9321 | 0.9335 | 0.905  |
+| KNN                    |     0.9166 | 0.9833 |      0.932  |   0.9271 | 0.9293 | 0.8992 |
+| Decision Tree          |     0.8917 | 0.9448 |      0.9084 |   0.9088 | 0.9085 | 0.8691 |
+| Naive Bayes            |     0.7639 | 0.9672 |      0.7744 |   0.7694 | 0.7677 | 0.7154 |
 
 ### Observations
 | ML Model Name | Observation about model performance |
@@ -37,7 +37,7 @@ Live app: <PASTE STREAMLIT COMMUNITY CLOUD URL HERE>
 | Naive Bayes | <fill: lowest, since features are highly correlated, violating independence assumption> |
 | Support Vector Machine | <fill: RBF kernel models non-linear boundaries; usually best/near-best> |
 
-**Overall winner:** <fill in the model with the best Accuracy/MCC/F1 in your table, with one sentence of justification>
+**Overall winner:** Support Vector Machine (0.9221)
 
 ## Repository Structure
 ```
