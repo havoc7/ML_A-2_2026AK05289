@@ -54,6 +54,7 @@ def compute_metrics(model, X, y):
 
 
 st.title("🌱 Dry Bean Classification")
+st.write("Submission by Sarthak Rout - 2026AK05289")
 st.write("Evaluate 5 pre-trained classifiers on **test data** (UCI Dry Bean dataset). "
          "Models are loaded from disk - nothing is retrained.")
 
